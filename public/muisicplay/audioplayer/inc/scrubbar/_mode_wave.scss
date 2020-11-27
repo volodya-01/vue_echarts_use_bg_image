@@ -1,0 +1,140 @@
+
+.zoomsounds-external-scrubbar.skin-wave, .audioplayer.scrubbar-type-wave {
+
+
+  .scrubbar-type-wave--canvas{
+
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    $transition-property: visibility, opacity, transform;
+    $transition-duration: 0.3s;
+    $transition-timing: ease-out;
+    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  }
+
+  .scrubbar .scrub-bg .scrub-bg-img {
+  }
+
+  .scrubbar-type-wave--canvas.transitioning-out, .scrubbar-type-wave--canvas.preparing-transitioning-in {
+
+    opacity: 0;
+  }
+  .scrubbar-type-wave--canvas.transitioning-in, .scrubbar-type-wave--canvas.transitioning-in {
+    opacity: 1;
+  }
+}
+
+
+.zoomsounds-external-scrubbar.skin-wave, .audioplayer.scrubbar-type-wave {
+  .scrubbar {
+
+
+    width: 100%;
+    height: ($size_scrub + $size_scrub_reflect + 10);
+    cursor: pointer;
+    position: relative;
+
+    opacity: 0;
+
+
+    $transition-property: transform, opacity, margin;
+    $transition-duration: 0.3s;
+    $transition-timing: ease-out;
+
+    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+
+    .scrub-bg {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: $size_scrub;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: transparent;
+
+
+      canvas.scrub-bg-img {
+        width: 100% !important;
+        image-rendering: crisp-edges;
+      }
+    }
+
+
+    .scrub-prog {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: $size_scrub;
+      height: 100%;
+      overflow: hidden;
+      background-color: transparent;
+      direction: ltr;
+    }
+
+
+    .scrub-bg-reflect {
+      position: absolute;
+      top: $size_scrub;
+      left: 0;
+      width: 100%;
+      height: $size_scrub_reflect;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: transparent;
+      opacity: 0.5;
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+
+      img.scrub-bg-img-reflect {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        position: relative;
+
+        display: block;
+      }
+    }
+
+
+    .scrub-prog-reflect {
+      position: absolute;
+      top: $size_scrub;
+      left: 0;
+      width: 0;
+      height: $size_scrub_reflect;
+      overflow: hidden;
+      background-color: transparent;
+      direction: ltr;
+
+      img.scrub-prog-img-reflect, .scrub-prog-canvas-reflect {
+
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        opacity: 0.5;
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+
+        display: block;
+      }
+    }
+
+
+  }
+}
+
+.audioplayer.skin-wave .ap-controls .scrubbar .scrub-prog .scrub-prog-img{
+  height:100%;
+  width: 100%;
+  max-width: none;
+}

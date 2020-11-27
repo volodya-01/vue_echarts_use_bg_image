@@ -1,0 +1,97 @@
+
+.misc-icon-itunes, .misc-icon-soundcloud, .misc-icon-youtube {
+  background-image: url(img/icon_itunes.svg);
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 5px;
+  background-size: cover;
+}
+
+.misc-icon-soundcloud {
+
+  background-image: url(img/icon_soundcloud.svg);
+}
+
+.misc-icon-youtube {
+
+  background-image: url(img/icon_youtube.svg);
+}
+
+
+.play-button-simple-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-grad {
+  background-color: #a195cb;
+  color: #444343;
+
+  padding: 4px 7px;
+  display: inline-block;;
+
+  border-radius: 3px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+
+  $transition-property: color, background;
+  $transition-duration: 0.3s;
+  $transition-timing: ease-out;
+
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+  &:hover {
+
+    background-color: #8b6ecb;
+    color: #e2e1e1;
+  }
+
+  .the-icon {
+    margin-right: 5px;
+
+    > svg {
+      display: block;
+    }
+  }
+
+  &.skin-white {
+    background-color: #ffffff;
+
+    border: 2px solid #444;
+    color: #444444;;
+    border-radius: 0;
+    text-transform: uppercase;
+
+    font-size: 13px;
+  }
+
+  & + .button-grad {
+    margin-left: 5px;
+  }
+
+}
+
+.button-grad:hover {
+
+  text-decoration: none;
+}
+
+@media all and (max-width: 850px) {
+  .button-grad {
+
+
+    display: block;
+    float: left;
+    clear: left;
+
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  .controls-volume {
+    display: none !important;
+  }
+}

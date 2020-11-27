@@ -1,0 +1,72 @@
+.center-ap-inside {
+  .audioplayer-tobe{
+    height: 0;
+  }
+  > .audioplayer, > .audioplayer-song-changer, > .audiogallery {
+
+    @include centerit();
+
+    &.skin-minimal {
+      //display: inline-block;
+      //width: auto;
+
+      text-align: center;
+    }
+  }
+}
+
+.wc-dzsap-wrapper {
+  .skin-customcontrols {
+    z-index: 1;
+  }
+}
+.wc-dzsap-wrapper.go-to-thumboverlay {
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+.display-inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.display-inline-block-inside {
+  > * {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+.ap-wrapper.center-ap {
+  > *[class*="audio"], .zoomsounds-comment-wrapper {
+    max-width: 1190px;
+    margin: 0px auto;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.ap-wrapper {
+  width: 100%;
+
+  padding: 10px;
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ap-wrapper > .the-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+
+  pointer-events: none;
+}

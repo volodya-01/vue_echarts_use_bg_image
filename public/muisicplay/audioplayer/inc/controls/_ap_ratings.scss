@@ -1,0 +1,114 @@
+.star-rating-con {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+
+  float: none;
+
+  //margin: 0 auto;
+
+  $w: 120px;
+  width: $w;
+
+  margin-left: -3px;
+
+  cursor: pointer;
+
+  opacity: 1;
+
+  $transition-property: opacity;
+  $transition-duration: 0.2s;
+  $transition-timing: ease-out;
+
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+  .rating-bg, .rating-prog {
+    position: relative;
+
+
+    display: block;
+
+    height: 15px;
+
+    .rating-inner {
+
+      width: $w;
+
+      display: flex;
+      height: 100%;
+    }
+
+    svg {
+      height: 100%;
+
+
+      transform: scale(1);
+
+      $transition-property: transform;
+      $transition-duration: 0.2s;
+      $transition-timing: ease-out;
+
+      @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+      path {
+        fill: #aaa;
+      }
+    }
+
+    svg:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    svg:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    svg:nth-child(3) {
+      transition-delay: 0.15s;
+    }
+
+    svg:nth-child(4) {
+      transition-delay: 0.2s;
+    }
+
+    svg:nth-child(5) {
+      transition-delay: 0.25s;
+    }
+
+  }
+
+
+  &.just-rated {
+
+    opacity: 0.7;
+
+    svg {
+      transform: scale(1.25);
+    }
+  }
+
+  $color_highlight: #DB5F66;
+
+  .rating-prog {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 0%;
+
+
+    $transition-property: width;
+    $transition-duration: 0.3s;
+    $transition-timing: ease-out;
+
+    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+    svg {
+      path {
+        fill: $color_highlight
+      }
+    }
+  }
+}

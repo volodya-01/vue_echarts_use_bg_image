@@ -1,0 +1,86 @@
+.zoomsounds-nav{
+
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  opacity: 0;
+
+  width: 100%;
+  overflow: hidden;
+
+  .menu-item{
+    position: relative;
+    //    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    padding-right: 90px;
+
+
+
+
+    .button-grad{
+      display: none;
+    }
+    .menu-item-thumb-con {
+      width: 25px;
+      height: 25px;
+
+      .menu-item-thumb{
+
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  }
+
+
+  .menu-item:after{
+    content: " ";
+    clear: both;
+    display: block;
+  }
+
+  .menu-item:last-child{
+    border-bottom-width: 0px;
+  }
+
+  .menu-item:last-child:before{
+    display: none;
+  }
+
+
+
+
+
+
+  &.navigation-method-legacyscroll{
+    overflow: auto;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@import "ag_skin_wave";
+@import "ag_skin_default";
+@import "ag_skin_aura";

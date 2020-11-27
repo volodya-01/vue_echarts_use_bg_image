@@ -1,0 +1,111 @@
+
+.playbtn-darkround, .pausebtn-darkround {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background-color: rgba(50, 50, 50, 0.65);
+
+  @include centerit();
+
+
+  &.smaller-buttons {
+    width: 25px;
+    height: 25px;
+
+
+  }
+
+
+  $transition-property: background;
+  $transition-duration: 0.3s;
+  $transition-timing: ease-out;
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+}
+
+
+.playbtn-darkround[data-border-radius="5px"], .pausebtn-darkround[data-border-radius="5px"] {
+  border-radius: 5px;
+}
+
+.playbtn-darkround[data-size="30px"], .pausebtn-darkround[data-size="30px"] {
+  width: 40px;
+  height: 40px;
+}
+
+.playbtn-darkround[data-size="25px"], .pausebtn-darkround[data-size="25px"] {
+  width: 25px;
+  height: 25px;
+}
+
+
+.playbtn-darkround:after {
+  content: "";
+
+
+  width: 0;
+  height: 0;
+
+  $size: 15px;
+
+  border-top: $size/1.5 solid transparent;
+  border-bottom: $size/1.5 solid transparent;
+
+  border-left: $size solid #CCCCCC;
+
+  @include centerit();
+
+  margin-left: 2px;
+
+}
+
+.playbtn-darkround[data-size="30px"]:after {
+
+  $size: 12px;
+  border-top: $size/1.5 solid transparent;
+  border-bottom: $size/1.5 solid transparent;
+
+  border-left: $size solid #CCCCCC;
+}
+
+.playbtn-darkround[data-size="25px"]:after {
+
+  $size: 12px;
+  border-top: $size/2 solid transparent;
+  border-bottom: $size/2 solid transparent;
+
+  border-left: $size solid #CCCCCC;
+}
+
+.pausebtn-darkround[data-size="30px"]:before, .pausebtn-darkround[data-size="30px"]:after {
+  transform: scale(0.8) translate3d(-50%, -50%, 0);
+
+  margin-top: -2px;
+}
+
+
+.pausebtn-darkround:before, .pausebtn-darkround:after {
+  content: "";
+
+
+  width: 5px;
+  height: 20px;
+
+  margin-left: -4px;
+
+  background-color: #CCCCCC;
+
+  @include centerit();
+
+}
+
+.pausebtn-darkround:after {
+  margin-left: 5px;
+}
+
+.playbtn-darkround:hover, .pausebtn-darkround:hover {
+
+  background-color: rgba(50, 50, 50, 0.5);
+}

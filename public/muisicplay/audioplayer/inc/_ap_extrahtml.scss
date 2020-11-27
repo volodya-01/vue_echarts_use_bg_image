@@ -1,0 +1,95 @@
+
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+.extra-html {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.7;
+
+  > * {
+    line-height: 1;
+  }
+
+  > p {
+
+    line-height: 1.7;
+  }
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+
+
+  > *:not(.display-block) {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  i + .the-number {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .float-left {
+    position: relative;
+    top: -3px;
+  }
+
+  .float-left.thumb-margin {
+    padding-left: 150px;
+  }
+}
+.extra-html.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+}
+
+.extra-html:after {
+  display: block;
+  clear: both;
+  content: " ";
+}
+.extra-html--left {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+
+.audioplayer > .extra-html-in-controls-left {
+  display: none;
+}
+
+.audioplayer > .extra-html-in-controls-right {
+  display: none;
+}
+
+
+
+
+.extra-html i {
+  height: auto;
+}
+
+.extrahtml-in-float-right {
+  white-space: nowrap;
+
+  > * {
+    display: inline-block;
+  }
+
+  &:last-child {
+    margin-left: 10px;
+  }
+}
