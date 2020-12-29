@@ -26,7 +26,7 @@ export default {
       let Actual_FlowData = e.Actual_FlowData,
         Actual_PressureData = e.Actual_PressureData,
         Actual_Time = e.Actual_Time;
-      let colorList = [
+        let colorList = [
         "#c23531",
         "#2f4554",
         "#61a0a8",
@@ -38,6 +38,16 @@ export default {
         "#6e7074",
         "#546570",
         "#c4ccd3",
+        "#990066",
+        "#FFCC00",
+        "#CC0033",
+        "#FFCC33",
+        "#333399",
+        "#FF0033",
+        "#666699",
+        "#FFFF00",
+        "#FF0033",
+        "#FF6600",
       ];
       //PumpData Time PumpNo
       let gridIndexArray = [];

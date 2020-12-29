@@ -35,6 +35,16 @@ export default {
         "#6e7074",
         "#546570",
         "#c4ccd3",
+        "#990066",
+        "#FFCC00",
+        "#CC0033",
+        "#FFCC33",
+        "#333399",
+        "#FF0033",
+        "#666699",
+        "#FFFF00",
+        "#FF0033",
+        "#FF6600",
       ];
       //PumpData Time PumpNo
       let gridIndexArray = [];
